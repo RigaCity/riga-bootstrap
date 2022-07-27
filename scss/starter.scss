@@ -9,7 +9,6 @@
 // `$body-color` or write more CSS that override's Bootstrap's CSS like so:
 // `body { color: red; }`.
 
-
 //
 // Bring in Bootstrap
 //
@@ -25,66 +24,44 @@
 // Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
 
 // Toggle global options
-$enable-gradients: true;
-$enable-shadows: true;
+$enable-rounded: false;
+
+// Official brand colors
+$rd-white: #ffffff !default; // Rīgas baltais
+$rd-blue: #254cd4 !default; // Rudzupuķu zilais
+$rd-blue-dark: #000b40 !default; // Jāņu nakts zilais
+$rd-blue-light: #aad0ff !default; // Debesu zilais
+$rd-green: #78e9b8 !default; // Kapara zaļais
+$rd-green-dark: #0d382c !default; // Priežu zaļais
+$rd-green-light: #e2ff86 !default; // Gurķīšu iekšiņas zaļais
+$rd-green-alt: #77893a !default; // Ozolzaļš
+$rd-gray-light: #b8b6a4 !default; // Smilšu pelēkais
+$rd-gray-dark: #565947 !default; // Novembra pelēkais
+$rd-red-light: #ff4b33 !default; // Dakstiņu sarkanais
+$rd-red-dark: #43010b !default; // Brūkleņu sarkanais
+$rd-violet: #beafec !default; // Ceriņu lillā
+$rd-black: #000000 !default; // Rīgas mellais
 
 // Customize some defaults
-$body-color: #333;
 $body-bg: #fff;
-$border-radius: .4rem;
-$success: #7952b3;
+$body-color: $rd-blue-dark;
 
-@import "bootstrap/scss/functions"; // Required
-@import "bootstrap/scss/variables"; // Required
-@import "bootstrap/scss/mixins"; // Required
+$primary: $rd-blue !default;
+$secondary: $rd-gray-light !default;
+$success: $rd-green !default;
+$info: $rd-violet !default;
+$warning: #ffc107 !default; // TODO: find a better color
+$danger: $rd-red-light !default;
+$light: $rd-blue-light !default;
+$dark: $rd-blue-dark !default;
 
-@import "bootstrap/scss/root"; // Required
-@import "bootstrap/scss/reboot"; // Required
-@import "bootstrap/scss/type";
-// @import "bootstrap/scss/images";
-// @import "bootstrap/scss/code";
-@import "bootstrap/scss/grid";
-// @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/forms";
-@import "bootstrap/scss/buttons";
-@import "bootstrap/scss/transitions";
-// @import "bootstrap/scss/dropdown";
-// @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/input-group"; // Requires forms
-// @import "bootstrap/scss/custom-forms";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
-// @import "bootstrap/scss/card";
-// @import "bootstrap/scss/breadcrumb";
-// @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
-// @import "bootstrap/scss/jumbotron";
-// @import "bootstrap/scss/alert";
-// @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/media";
-// @import "bootstrap/scss/list-group";
-@import "bootstrap/scss/close";
-// @import "bootstrap/scss/toasts";
-@import "bootstrap/scss/modal"; // Requires transitions
-// @import "bootstrap/scss/tooltip";
-// @import "bootstrap/scss/popover";
-// @import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/spinners";
-@import "bootstrap/scss/utilities";
-// @import "bootstrap/scss/print";
+$yiq-text-dark: $rd-black;
 
-
-//
-// Custom styles
-//
-
-@import "icon-list";
-
-body {
-  padding: 3rem 1.5rem;
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-extrabold.woff") format("woff");
 }
 
-// Style Bootstrap icons
-.bi {
-  fill: currentColor;
-}
+$headings-font-family: "Gilroy" !default;
+
+@import "bootstrap/scss/bootstrap";
