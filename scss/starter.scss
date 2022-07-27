@@ -24,7 +24,7 @@
 // Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
 
 // Toggle global options
-$enable-rounded: false;
+$enable-rounded: true;
 
 // Official brand colors
 $rd-white: #ffffff !default; // Rīgas baltais
@@ -62,6 +62,55 @@ $yiq-text-dark: $rd-black;
   src: url("../fonts/gilroy-extrabold.woff") format("woff");
 }
 
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/Gilroy-Medium.eot");
+  src: url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Gilroy-Medium.woff") format("woff"),
+    url("../fonts/Gilroy-Medium.ttf") format("truetype"),
+    url("../fonts/Gilroy-Medium.svg#CoreSans") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/Gilroy-Bold.eot");
+  src: url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Gilroy-Bold.woff") format("woff"),
+    url("../fonts/Gilroy-Bold.ttf") format("truetype"),
+    url("../fonts/Gilroy-Bold.svg#CoreSans") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-SemiBold.eot");
+  src: url("../fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Gilroy-SemiBold.woff") format("woff"),
+    url("../fonts/Gilroy-SemiBold.ttf") format("truetype"),
+    url("../fonts/Gilroy-SemiBold.svg#Gilroy") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "liveriga";
+  src: url("../fonts/liveriga.eot");
+  src: url("../fonts/liveriga.eot#iefix") format("embedded-opentype"),
+    url("../fonts/liveriga.ttf") format("truetype"),
+    url("../fonts/liveriga.woff") format("woff"),
+    url("../fonts/liveriga.svg#liveriga") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 $headings-font-family: "Gilroy" !default;
+$headings-font-weight: 700;
 
 @import "bootstrap/scss/bootstrap";
