@@ -24,6 +24,7 @@ jobs:
         uses: actions/configure-pages@v2
       - name: Install and Build
         run: |
+          npm ci
           npm run css
 
       - name: Deploy 🚀
